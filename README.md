@@ -4,12 +4,12 @@ Este proyecto busca optimizar el trabajo de cotizar y adminstrar
 ## Instalación
 ### Desarrollo
 Para realizar la instalación en entorno local es necesario de las siguientes dependencias de desarrollo
-- [Laravel 7.x](laravel.com/docs/7.x/)  
-- [PHP >= 7.2.5](php.net)
-- [Node >= 14.4.0](nodejs.org)
-- [NPM >= 6.14.4](npmjs.com)
-- [Redis](redis.io)
-- [Homestead(Linux)](laravel.com/docs/7.x/homestead) o [Valet(MacOs)](laravel.com/docs/7.x/valet) o [Laragon(Windows)](laragon.org)
+- [Laravel 7.x](https://laravel.com/docs/7.x/)  
+- [PHP >= 7.2.5](https://php.net)
+- [Node >= 14.4.0](https://nodejs.org)
+- [NPM >= 6.14.4](https://npmjs.com)
+- [Redis](https://redis.io)
+- [Homestead(Linux)](https://laravel.com/docs/7.x/homestead) o [Valet(MacOs)](https://laravel.com/docs/7.x/valet) o [Laragon(Windows)](https://laragon.org)
 
 Una vez satisfechas las dependencias es necesario correr los siguientes comandos
 ```bash
@@ -69,7 +69,7 @@ Las pull request son bienvenidas siempre y cuando sigan las reglas de conducta l
 
 ### Convenciones
 - Todas las clases deben comenzar por mayúsculas  
-- Todos los métodos de los test deben seguir [snake_case](wikipedia.org/wiki/Snake_case)
+- Todos los métodos de los test deben seguir [snake_case](https://wikipedia.org/wiki/Snake_case)
 - Todas las interfaces deben tener el sufijo `Interface`
 - Todos repositorios deben tener el sufijo `Repository`  
 - Todos los decoradores deben tener el sufijo `Decorator`
@@ -82,36 +82,36 @@ Las pull request son bienvenidas siempre y cuando sigan las reglas de conducta l
 - Todos los modelos deben ser añadidos en la carpeta `app/Models/`
 - Todos los modelos deben tener un método llamado `presenter` que retorne una instancia del `ViewPresenter` relacionado a este modelo
 - Todos los modelos deben definir la propiedad `$fillable` para utilizar el método `create`
-- Todos las relaciones de modelos deben contar con un [feature test](laravel.com/docs/7.x/testing#creating-and-running-tests)  
+- Todos las relaciones de modelos deben contar con un [feature test](https://laravel.com/docs/7.x/testing#creating-and-running-tests)  
 - Todos los modelos deben contar con:  
-    - Un [ViewPresenter](laraveles.com/vistas-mas-legibles-usando-presenters-en-laravel)  
-    - Un [recurso](laravel.com/docs/7.x/eloquent-resources) de eloquent  
-    - Un [controlador](laravel.com/docs/7.x/controllers#restful-partial-resource-routes) de tipo recurso API (opcional)  
-    - Un [recurso de colleción](laravel.com/docs/7.x/eloquent-resources#pagination) para datos paginados  
-    - Un [repositorio](medium.com/@cesiztel/repository-pattern-en-laravel-f66fcc9ea492) (Solo en caso de tener un controlador)  
-    - Un [decorador](dev.to/ahmedash95/design-patterns-in-php-decorator-with-laravel-5hk6) (Solo en caso de tener un controlador)  
-- Todos los controladores que interactuen con modelos directamente deben ser creados como [controladores de recursos API](laravel.com/docs/7.x/controllers#restful-partial-resource-routes)  
-- Todas las acciones que requieran de mas métodos ademas del CRUD deben ser definidos como [controladores de una sola acción](laravel.com/docs/7.x/controllers#single-action-controllers)  
-- Todas las rutas deben contar con un [request de validación](laravel.com/docs/7.x/validation#creating-form-requests)  
-- Todos los métodos de los controladores deben contar con un [unit test](laravel.com/docs/7.x/http-tests)
-- Todos los métodos de los controladores deben contar con un [dusk test](laravel.com/docs/7.x/dusk#getting-started)  
+    - Un [ViewPresenter](https://laraveles.com/vistas-mas-legibles-usando-presenters-en-laravel)  
+    - Un [recurso](https://laravel.com/docs/7.x/eloquent-resources) de eloquent  
+    - Un [controlador](https://laravel.com/docs/7.x/controllers#restful-partial-resource-routes) de tipo recurso API (opcional)  
+    - Un [recurso de colleción](https://laravel.com/docs/7.x/eloquent-resources#pagination) para datos paginados  
+    - Un [repositorio](https://medium.com/@cesiztel/repository-pattern-en-laravel-f66fcc9ea492) (Solo en caso de tener un controlador)  
+    - Un [decorador](https://dev.to/ahmedash95/design-patterns-in-php-decorator-with-laravel-5hk6) (Solo en caso de tener un controlador)  
+- Todos los controladores que interactuen con modelos directamente deben ser creados como [controladores de recursos API](https://laravel.com/docs/7.x/controllers#restful-partial-resource-routes)  
+- Todas las acciones que requieran de mas métodos ademas del CRUD deben ser definidos como [controladores de una sola acción](https://laravel.com/docs/7.x/controllers#single-action-controllers)  
+- Todas las rutas deben contar con un [request de validación](https://laravel.com/docs/7.x/validation#creating-form-requests)  
+- Todos los métodos de los controladores deben contar con un [unit test](https://laravel.com/docs/7.x/http-tests)
+- Todos los métodos de los controladores deben contar con un [dusk test](https://laravel.com/docs/7.x/dusk#getting-started)  
 - La única función de los métodos de controladores es llamar a repositorios, decoradores, eventos y/o trabajos
-- todas las rutas deben devolver un [recurso api](laravel.com/docs/7.x/eloquent-resources) en respuestas  200 > 300 (status)
-- Las rutas tipo `index` deben devolver un recurso de tipo [colección](laravel.com/docs/7.x/eloquent-resources#writing-resources) o un tipo [paginación](laravel.com/docs/7.x/eloquent-resources#pagination)
-- Las rutas de tipo `store` deben devolver un [recurso API](laravel.com/docs/7.x/eloquent-resources#writing-resources) del registro creado en la base de datos
-- Las rutas de tipo `update` deben devolver un [recurso API](laravel.com/docs/7.x/eloquent-resources#writing-resources) del registro actualizado en la base de datos
-- las rutas de tipo `destroy` deben devolver un [recurso API](laravel.com/docs/7.x/eloquent-resources#writing-resources) del registro eliminado
-- El uso de servicios de terceros como [APIs](xataka.com/basics/api-que-sirve) de desarrollan en un [paquete externo](laravel.com/docs/7.x/packages) privado al repositorio
-- El envio de correos se delega a las [colas](laravel.com/docs/7.x/queues)
-- El uso de broadcasting se delega a las [colas](laravel.com/docs/7.x/queues)  
+- todas las rutas deben devolver un [recurso api](https://laravel.com/docs/7.x/eloquent-resources) en respuestas  200 > 300 (status)
+- Las rutas tipo `index` deben devolver un recurso de tipo [colección](https://laravel.com/docs/7.x/eloquent-resources#writing-resources) o un tipo [paginación](https://laravel.com/docs/7.x/eloquent-resources#pagination)
+- Las rutas de tipo `store` deben devolver un [recurso API](https://laravel.com/docs/7.x/eloquent-resources#writing-resources) del registro creado en la base de datos
+- Las rutas de tipo `update` deben devolver un [recurso API](https://laravel.com/docs/7.x/eloquent-resources#writing-resources) del registro actualizado en la base de datos
+- las rutas de tipo `destroy` deben devolver un [recurso API](https://laravel.com/docs/7.x/eloquent-resources#writing-resources) del registro eliminado
+- El uso de servicios de terceros como [APIs](https://xataka.com/basics/api-que-sirve) de desarrollan en un [paquete externo](https://laravel.com/docs/7.x/packages) privado al repositorio
+- El envio de correos se delega a las [colas](https://laravel.com/docs/7.x/queues)
+- El uso de broadcasting se delega a las [colas](https://laravel.com/docs/7.x/queues)  
 
 
 ### Patrones de diseño
 _Los links son meras referencias generales de los patrones_
-#### [Desarrollo por pruebas(TDD)](www.paradigmadigital.com/dev/tdd-como-metodologia-de-diseno-de-software)
-#### [Patrón Repository](medium.com/@cesiztel/repository-pattern-en-laravel-f66fcc9ea492)
-#### [Patrón Decorator](dev.to/ahmedash95/design-patterns-in-php-decorator-with-laravel-5hk6)
-#### [Patrón ViewPresenter](laraveles.com/vistas-mas-legibles-usando-presenters-en-laravel)
+#### [Desarrollo por pruebas(TDD)](https://www.paradigmadigital.com/dev/tdd-como-metodologia-de-diseno-de-software)
+#### [Patrón Repository](https://medium.com/@cesiztel/repository-pattern-en-laravel-f66fcc9ea492)
+#### [Patrón Decorator](https://dev.to/ahmedash95/design-patterns-in-php-decorator-with-laravel-5hk6)
+#### [Patrón ViewPresenter](https://laraveles.com/vistas-mas-legibles-usando-presenters-en-laravel)
 
 ## License
 Por definir
