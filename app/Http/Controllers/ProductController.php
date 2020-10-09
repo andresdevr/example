@@ -49,7 +49,8 @@ class ProductController extends Controller
      */
     public function show(Product $product)
     {
-        //
+        $product = $this->products->show($product);
+        return ProductResource::make($product);
     }
 
     /**
