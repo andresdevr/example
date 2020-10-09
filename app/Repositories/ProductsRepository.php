@@ -11,7 +11,12 @@ class ProductsRepository implements ModelInterface
 {
     public function index()
     {
+        return Product::all();
+    }
 
+    public function getPaginated($records)
+    {
+        return Product::paginate($records);
     }
 
     public function store(Request $request)
@@ -25,17 +30,22 @@ class ProductsRepository implements ModelInterface
 
     public function show($product)
     {
-
+        return $product;
     }
 
     public function update(Request $request, $product)
     {
-
+        $product->name = $request->name;
+        $product->sku = $request->sku;
+        $product->price = $request->price;
+        $product->save();
+        return $product;
     }
 
     public function destroy($product)
     {
-        
+        $product->delete();
+        return $product;
     }
 
 }
