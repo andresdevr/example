@@ -8,6 +8,9 @@ require('./bootstrap');
 
 window.Vue = require('vue');
 
+import VueAtlas from 'vue-atlas';
+
+
 import VueRouter from 'vue-router';
 import { routes } from './routes';
 
@@ -19,7 +22,7 @@ import VueCookies from 'vue-cookies'
 import route from 'ziggy';
 import { Ziggy } from './ziggy';
 
-window.Vue.use(Vuesax);
+window.Vue.use(VueAtlas);
 window.Vue.use(VueRouter);
 window.Vue.use(Vuex);
 Vue.use(VueCookies);
