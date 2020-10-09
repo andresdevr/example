@@ -5,9 +5,11 @@
 /public/css
 /public/assets
 /public/mix-manifest.json
+
 /storage/*.key
 /vendor
 .env
+.env.dusk.local
 .env.backup
 .phpunit.result.cache
 Homestead.json
