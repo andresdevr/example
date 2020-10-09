@@ -9,6 +9,6 @@ use Illuminate\Support\Facades\Route;
 Auth::routes();
 
 //SPA route
-Route::get('/{any}', 'AppController')->where('any', '.*')->name('app');
 
 Route::apiResource('products', ProductController::class);
+Route::get('/{any}', 'AppController')->where('any', '.*')->name('app');

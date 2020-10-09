@@ -16,12 +16,12 @@ class CreateProductTest extends TestCase
     public function authtenticated_users_can_create_products()
     {
         $user = factory(User::class)->create();
-
+        $this->withoutExceptionHandling();
         
         $product = [
             'name' => 'productname',
             'sku' => 'productsku',
-            'price' => 'productoprice'
+            'price' => 5
         ];
 
         $response = $this->actingAs($user)->post('/products', $product);
