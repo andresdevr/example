@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Interfaces\ProductsInterface;
 use App\Models\Product;
 use App\Repositories\ProductsRepository;
 use Illuminate\Http\Request;
@@ -34,7 +35,7 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        $product = $this->products->create($request);
+        $product = $this->products->store($request);
     }
 
     /**

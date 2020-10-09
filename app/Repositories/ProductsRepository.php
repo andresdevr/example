@@ -4,12 +4,17 @@
 namespace App\Repositories;
 
 use App\Models\Product;
-use App\Interfaces\ProductsInterface;
+use App\Interfaces\ModelInterface;
+use Illuminate\Http\Request;
 
-class ProductsRepository implements ProductsInterface
+class ProductsRepository implements ModelInterface
 {
+    public function index()
+    {
 
-    public function create($request)
+    }
+
+    public function store(Request $request)
     {
         return Product::create([
             'name' => $request->name,
@@ -17,4 +22,20 @@ class ProductsRepository implements ProductsInterface
             'price' => $request->price
         ]);
     }
+
+    public function show($product)
+    {
+
+    }
+
+    public function update(Request $request, $product)
+    {
+
+    }
+
+    public function destroy($product)
+    {
+        
+    }
+
 }
