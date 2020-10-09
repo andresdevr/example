@@ -10,7 +10,7 @@ interface ModelInterface
 {
     public function index();
 
-    public function getPaginated($records);
+    public function getPaginated($records, Request $request);
 
     public function store(Request $request);
 

@@ -15,7 +15,7 @@ class ProductsRepository implements ModelInterface, ProductsInterface
         return Product::all();
     }
 
-    public function getPaginated($records)
+    public function getPaginated($records, Request $request)
     {
         return Product::paginate($records);
     }
