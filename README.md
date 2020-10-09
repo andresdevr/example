@@ -84,12 +84,12 @@ Las pull request son bienvenidas siempre y cuando sigan las reglas de conducta l
 - Todos los modelos deben definir la propiedad `$fillable` para utilizar el método `create`
 - Todos las relaciones de modelos deben contar con un [feature test](laravel.com/docs/7.x/testing#creating-and-running-tests)  
 - Todos los modelos deben contar con:  
-  - Un [ViewPresenter](laraveles.com/vistas-mas-legibles-usando-presenters-en-laravel)  
-  - Un [recurso](laravel.com/docs/7.x/eloquent-resources) de eloquent  
-  - Un [controlador](laravel.com/docs/7.x/controllers#restful-partial-resource-routes) de tipo recurso API (opcional)  
-  - Un [recurso de colleción](laravel.com/docs/7.x/eloquent-resources#pagination) para datos paginados  
-  - Un [repositorio](medium.com/@cesiztel/repository-pattern-en-laravel-f66fcc9ea492) (Solo en caso de tener un controlador)  
-  - Un [decorador](dev.to/ahmedash95/design-patterns-in-php-decorator-with-laravel-5hk6) (Solo en caso de tener un controlador)  
+    - Un [ViewPresenter](laraveles.com/vistas-mas-legibles-usando-presenters-en-laravel)  
+    - Un [recurso](laravel.com/docs/7.x/eloquent-resources) de eloquent  
+    - Un [controlador](laravel.com/docs/7.x/controllers#restful-partial-resource-routes) de tipo recurso API (opcional)  
+    - Un [recurso de colleción](laravel.com/docs/7.x/eloquent-resources#pagination) para datos paginados  
+    - Un [repositorio](medium.com/@cesiztel/repository-pattern-en-laravel-f66fcc9ea492) (Solo en caso de tener un controlador)  
+    - Un [decorador](dev.to/ahmedash95/design-patterns-in-php-decorator-with-laravel-5hk6) (Solo en caso de tener un controlador)  
 - Todos los controladores que interactuen con modelos directamente deben ser creados como [controladores de recursos API](laravel.com/docs/7.x/controllers#restful-partial-resource-routes)  
 - Todas las acciones que requieran de mas métodos ademas del CRUD deben ser definidos como [controladores de una sola acción](laravel.com/docs/7.x/controllers#single-action-controllers)  
 - Todas las rutas deben contar con un [request de validación](laravel.com/docs/7.x/validation#creating-form-requests)  
