@@ -3,15 +3,24 @@
 namespace App\Http\Controllers;
 
 use App\Models\Product;
+use App\Repositories\ProductsRepository;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Log;
 
 class ProductController extends Controller
 {
+    protected $products;
+
+    function __construct(ProductsRepository $products)
+    {
+        $this->products = $products;
+    }
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
+
     public function index()
     {
         //
@@ -25,11 +34,7 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        $product = Product::create([
-            'name' => $request->name,
-            'sku' => $request->sku,
-            'price' => $request->price
-        ]);
+        $product = $this->products->create($request);
     }
 
     /**
