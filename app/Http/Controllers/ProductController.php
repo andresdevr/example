@@ -74,6 +74,7 @@ class ProductController extends Controller
      */
     public function destroy(Product $product)
     {
-        //
+        $product = $this->products->destroy($product);
+        return ProductResource::make($product);
     }
 }
