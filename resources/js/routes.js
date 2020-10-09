@@ -3,7 +3,7 @@ export const routes = [
         // MAIN LAYOUT
         path: '/',
         name: 'main',
-        component: () => import('./layouts/Main.Vue'),
+        component: () => import('./layouts/Main.vue'),
 
     },
     {
