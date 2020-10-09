@@ -22,6 +22,7 @@ class SeeProductsTest extends TestCase
         
         $response->assertStatus(200);
 
-        $response->assertJsonCount(10);
+        
+        $response->assertJsonCount(10, 'data');
     }
 }

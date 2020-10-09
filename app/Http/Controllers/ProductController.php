@@ -25,7 +25,8 @@ class ProductController extends Controller
 
     public function index()
     {
-        
+        $products = $this->products->index();
+        return ProductResource::collection($products);
     }
 
     /**
