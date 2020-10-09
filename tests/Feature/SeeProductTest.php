@@ -3,6 +3,7 @@
 namespace Tests\Feature;
 
 use App\Models\Product;
+use App\Models\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Tests\TestCase;
@@ -13,11 +14,12 @@ class SeeProductTest extends TestCase
     /**
      * @test
      */
-    public function test_example()
+    public function authenticated_users_can_see_x_product()
     {
+        $user = factory(User::class)->create();
         $product = factory(Product::class)->create();
 
-        $response = $this->get('/products/' . $product->id);
+        $response = $this->actingAs($user)->get('/products/' . $product->id);
 
         $response->assertStatus(200);
 
