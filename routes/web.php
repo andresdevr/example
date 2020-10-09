@@ -10,3 +10,5 @@ Auth::routes();
 
 //SPA route
 Route::get('/{any}', 'AppController')->where('any', '.*')->name('app');
+
+Route::apiResource('products', ProductController::class);
