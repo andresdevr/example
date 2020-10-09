@@ -8,6 +8,27 @@ require('./bootstrap');
 
 window.Vue = require('vue');
 
+import VueRouter from 'vue-router';
+import { routes } from './routes';
+
+import Vuex from 'vuex';
+import { vuex } from './store/store';
+
+import VueCookies from 'vue-cookies'
+
+import route from 'ziggy';
+import { Ziggy } from './../../routes';
+
+window.Vue.use(Vuesax);
+window.Vue.use(VueRouter);
+window.Vue.use(Vuex);
+Vue.use(VueCookies);
+
+Vue.mixin({
+    methods: {
+        route: (name, params, absolute) => route(name, params, absolute, Ziggy),
+    },
+});
 /**
  * The following block of code may be used to automatically register your
  * Vue components. It will recursively scan this directory for the Vue
@@ -16,10 +37,9 @@ window.Vue = require('vue');
  * Eg. ./components/ExampleComponent.vue -> <example-component></example-component>
  */
 
-// const files = require.context('./', true, /\.vue$/i)
-// files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
+const files = require.context('./', true, /\.vue$/i)
+files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
-Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
@@ -27,6 +47,17 @@ Vue.component('example-component', require('./components/ExampleComponent.vue').
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
+
+const store = new Vuex.Store(vuex);
+
+const router = new VueRouter({
+    mode: "history",
+    routes
+});
+
 const app = new Vue({
     el: '#app',
+    router,
+    store
 });
+
