@@ -1,61 +1,80 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+# ERP
+Este proyecto busca optimizar el trabajo de cotizar y adminstrar
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
-</p>
+## Instalación
+### Desarrollo
+Para realizar la instalación en entorno local es necesario de las siguientes dependencias de desarrollo
+- [Laravel 7.x](laravel.com/docs/7.x/)  
+- [PHP >= 7.2.5](php.net)
+- [Node >= 14.4.0](nodejs.org)
+- [NPM >= 6.14.4](npmjs.com)
+- [Redis](redis.io)
+- [Homestead(Linux)](laravel.com/docs/7.x/homestead) o [Valet(MacOs)](laravel.com/docs/7.x/valet) o [Laragon(Windows)](laragon.org)
 
-## About Laravel
+Una vez satisfechas las dependencias es necesario correr los siguientes comandos
+```bash
+composer install  
+composer run post-autoload-dump  
+composer run post-root-package-install  
+composer run post-root-package-dusk-install
+composer run post-create-project-cmd  
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+```
+Una vez se definen las variables de entorno en tu archivo `.env` y las variables de entorno para pruebas en tu archivo `.env.dusk.local` corre lo siguientes comandos
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+```bash
+php artisan migrate
+php artisan db:seed
+php artisan dusk:install
+php artisan cache:clear
+php artisan config:clear
+php artisan event:clear
+php artisan optimize:clear
+php artisan routes:clear
+php artisan view:clear
+php artisan ziggy:generate
+npm install
+npm run dev
+```
+Y puedes correr los tests con lo siguientes comandos(opcionales)
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+```bash
+php artisan test # pruebas unitarias y de caracteristicas
+php artisan dusk # pruebas de navegado3
+```
+### Produccion
 
-## Learning Laravel
+## Actualización
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+### Desarrollo
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
 
-## Laravel Sponsors
+### Produccion
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
 
-### Premium Partners
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[OP.GG](https://op.gg)**
+## Uso
 
-## Contributing
+```python
+import foobar
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+foobar.pluralize('word') # returns 'words'
+foobar.pluralize('goose') # returns 'geese'
+foobar.singularize('phenomena') # returns 'phenomenon'
+```
 
-## Code of Conduct
+## Contribuir al desarrollo
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+Las pull request son bienvenidas siempre y cuando sigan las reglas de conducta las cuales indican seguir las convenciones y patrones de diseño definidos a continuación
 
-## Security Vulnerabilities
+### Convenciones
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+### Patrones de diseño
+_Los links son meras referencias generales de los patrones_
+#### [Desarrollo por pruebas(TDD)](https://www.paradigmadigital.com/dev/tdd-como-metodologia-de-diseno-de-software/)
+#### [Patrón Repository](https://medium.com/@cesiztel/repository-pattern-en-laravel-f66fcc9ea492)
+#### [Patrón Decorator](https://dev.to/ahmedash95/design-patterns-in-php-decorator-with-laravel-5hk6)
+#### [Patrón ViewPresenter](https://laraveles.com/vistas-mas-legibles-usando-presenters-en-laravel/)
 
 ## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Por definir
