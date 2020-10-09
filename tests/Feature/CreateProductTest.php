@@ -26,7 +26,6 @@ class CreateProductTest extends TestCase
         $response = $this->actingAs($user)->postJson('/products', $product);
 
         $response->assertStatus(201);
-
         $this->assertDatabaseHas('products', $product);
     }
 }
