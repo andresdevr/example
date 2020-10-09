@@ -3,13 +3,13 @@ Este proyecto busca optimizar el trabajo de cotizar y adminstrar
 
 ## Instalación
 ### Desarrollo
-Para realizar la instalación en entorno local es necesario de las siguientes dependencias de desarrollo
+Para realizar la instalación en entorno local es necesario de las siguientes dependencias de desarrollo  
 - [Laravel 7.x](https://laravel.com/docs/7.x/)  
-- [PHP >= 7.2.5](https://php.net)
-- [Node >= 14.4.0](https://nodejs.org)
-- [NPM >= 6.14.4](https://npmjs.com)
-- [Redis](https://redis.io)
-- [Homestead(Linux)](https://laravel.com/docs/7.x/homestead) o [Valet(MacOs)](https://laravel.com/docs/7.x/valet) o [Laragon(Windows)](https://laragon.org)
+- [PHP >= 7.2.5](https://php.net)  
+- [Node >= 14.4.0](https://nodejs.org)  
+- [NPM >= 6.14.4](https://npmjs.com)  
+- [Redis](https://redis.io)  
+- [Homestead(Linux)](https://laravel.com/docs/7.x/homestead) o [Valet(MacOs)](https://laravel.com/docs/7.x/valet) o [Laragon(Windows)](https://laragon.org)  
 
 Una vez satisfechas las dependencias es necesario correr los siguientes comandos
 ```bash
