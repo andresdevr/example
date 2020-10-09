@@ -84,6 +84,7 @@ Las pull request son bienvenidas siempre y cuando sigan las reglas de conducta l
 - Todos los modelos deben definir la propiedad `$fillable` para utilizar el método `create`
 - Todos las relaciones de modelos deben contar con un [feature test](https://laravel.com/docs/7.x/testing#creating-and-running-tests)  
 - Todos los modelos deben contar con:  
+    - Un [Factory](https://laravel.com/docs/7.x/database-testing#writing-factories)
     - Un [ViewPresenter](https://laraveles.com/vistas-mas-legibles-usando-presenters-en-laravel)  
     - Un [recurso](https://laravel.com/docs/7.x/eloquent-resources) de eloquent  
     - Un [controlador](https://laravel.com/docs/7.x/controllers#restful-partial-resource-routes) de tipo recurso API (opcional)  
