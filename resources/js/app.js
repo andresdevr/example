@@ -17,7 +17,7 @@ import { vuex } from './store/store';
 import VueCookies from 'vue-cookies'
 
 import route from 'ziggy';
-import { Ziggy } from './../../routes';
+import { Ziggy } from './ziggy';
 
 window.Vue.use(Vuesax);
 window.Vue.use(VueRouter);
