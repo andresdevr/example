@@ -5,7 +5,8 @@
 /public/css
 /public/assets
 /public/mix-manifest.json
-
+/public/fonts
+/public/images
 /storage/*.key
 /vendor
 .env
