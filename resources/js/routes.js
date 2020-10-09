@@ -16,7 +16,17 @@ export const routes = [
                 path: '/page/login',
                 name: 'login',
                 component: () => import('./views/login/Login.vue')
+            },
+            {
+                path: '/page/*',
+                name: 'not found',
+                component: () => import('./views/errors/404.vue')
             }
         ]
     },
+    {
+        path: '*',
+        name: 'home',
+        component: () => import('./layouts/Home.vue')
+    }
 ];
