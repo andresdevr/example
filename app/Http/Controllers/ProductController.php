@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Resources\ProductResource;
 use App\Interfaces\ProductsInterface;
 use App\Models\Product;
 use App\Repositories\ProductsRepository;
@@ -24,7 +25,7 @@ class ProductController extends Controller
 
     public function index()
     {
-        //
+        
     }
 
     /**
@@ -36,6 +37,7 @@ class ProductController extends Controller
     public function store(Request $request)
     {
         $product = $this->products->store($request);
+        return ProductResource::make($product);
     }
 
     /**

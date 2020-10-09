@@ -16,7 +16,6 @@ class CreateProductTest extends TestCase
     public function authtenticated_users_can_create_products()
     {
         $user = factory(User::class)->create();
-        $this->withoutExceptionHandling();
         
         $product = [
             'name' => 'productname',
@@ -26,7 +25,7 @@ class CreateProductTest extends TestCase
 
         $response = $this->actingAs($user)->post('/products', $product);
 
-        $response->assertStatus(200);
+        $response->assertStatus(201);
 
         $this->assertDatabaseHas('products', $product);
     }
