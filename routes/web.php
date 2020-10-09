@@ -8,7 +8,9 @@ use Illuminate\Support\Facades\Route;
 // auth routes
 Auth::routes();
 
-//SPA route
-
+//example
 Route::apiResource('products', ProductController::class)->middleware('ajax');
+
+
+//SPA route
 Route::get('/{any}', 'AppController')->where('any', '.*')->name('app');

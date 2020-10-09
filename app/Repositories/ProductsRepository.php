@@ -5,9 +5,10 @@ namespace App\Repositories;
 
 use App\Models\Product;
 use App\Interfaces\ModelInterface;
+use App\Interfaces\ProductsInterface;
 use Illuminate\Http\Request;
 
-class ProductsRepository implements ModelInterface
+class ProductsRepository implements ModelInterface, ProductsInterface
 {
     public function index()
     {

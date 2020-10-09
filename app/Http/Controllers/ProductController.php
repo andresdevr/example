@@ -3,17 +3,17 @@
 namespace App\Http\Controllers;
 
 use App\Http\Resources\ProductResource;
+use App\Interfaces\ModelInterface;
 use App\Interfaces\ProductsInterface;
 use App\Models\Product;
 use App\Repositories\ProductsRepository;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Log;
 
 class ProductController extends Controller
 {
     protected $products;
 
-    function __construct(ProductsRepository $products)
+    function __construct(ProductsInterface $products)
     {
         $this->products = $products;
     }
