@@ -20,7 +20,7 @@ class DeleteProductTest extends TestCase
 
         $product = factory(Product::class)->create();
 
-        $response = $this->actingAs($user)->delete('/products/' . $product->id);
+        $response = $this->actingAs($user)->deleteJson('/products/' . $product->id);
 
         $response->assertStatus(200);
         

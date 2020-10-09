@@ -23,7 +23,7 @@ class CreateProductTest extends TestCase
             'price' => 5
         ];
 
-        $response = $this->actingAs($user)->post('/products', $product);
+        $response = $this->actingAs($user)->postJson('/products', $product);
 
         $response->assertStatus(201);
 

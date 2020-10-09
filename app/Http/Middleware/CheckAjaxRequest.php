@@ -16,8 +16,8 @@ class CheckAjaxRequest
      */
     public function handle($request, Closure $next)
     {
-        if (!$request->ajax())
-            return response('This request is not authorized', 422);
-        return $next($request);
+        if ($request->wantsJson())
+            return $next($request);
+        return response('This request is not authorized', 422);
     }
 }

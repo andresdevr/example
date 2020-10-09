@@ -19,7 +19,7 @@ class SeeProductsTest extends TestCase
         $user = factory(User::class)->create();
         factory(Product::class, 10)->create();
 
-        $response = $this->actingAs($user)->get('/products');
+        $response = $this->actingAs($user)->getJson('/products');
         
         $response->assertStatus(200);
 
