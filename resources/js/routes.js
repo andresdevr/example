@@ -3,14 +3,14 @@ export const routes = [
         // MAIN LAYOUT
         path: '/',
         name: 'main',
-        component: () => import('./Main.Vue'),
+        component: () => import('./layouts/Main.Vue'),
 
     },
     {
         //FULL PAGE LAYOUT
         path: '/page',
         name: 'full',
-        component: () => import('./FullPage.vue'),
+        component: () => import('./layouts/FullPage.vue'),
         children: [
             {
                 path: '/full/login',
