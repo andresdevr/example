@@ -62,7 +62,8 @@ class ProductController extends Controller
      */
     public function update(Request $request, Product $product)
     {
-        //
+        $product = $this->products->update($request, $product);
+        return ProductResource::make($product);
     }
 
     /**
