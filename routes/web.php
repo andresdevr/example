@@ -10,5 +10,5 @@ Auth::routes();
 
 //SPA route
 
-Route::apiResource('products', ProductController::class);
+Route::apiResource('products', ProductController::class)->middleware('ajax');
 Route::get('/{any}', 'AppController')->where('any', '.*')->name('app');
