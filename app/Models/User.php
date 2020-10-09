@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use App\Interfaces\PresenterInterface;
+use App\Presenters\UserPresenter;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
@@ -38,7 +39,7 @@ class User extends Authenticatable implements PresenterInterface
         'email_verified_at' => 'datetime',
     ];
 
-    public function presenter()
+    public function present()
     {
         return new UserPresenter($this);
     }

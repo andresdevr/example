@@ -5,5 +5,5 @@ namespace App\Interfaces;
 
 Interface PresenterInterface
 {
-    public function presenter();
+    public function present();
 }

@@ -12,7 +12,7 @@ class Product extends Model implements PresenterInterface
     use SoftDeletes;
     protected $fillable = ['name', 'price', 'sku'];
 
-    public function presenter()
+    public function present()
     {
         return new ProductPresenter($this);   
     }
