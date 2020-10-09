@@ -18,15 +18,15 @@ export const routes = [
                 component: () => import('./views/login/Login.vue')
             },
             {
-                path: '/page/*',
-                name: 'not found',
+                path: '/page/404',
+                name: '404',
                 component: () => import('./views/errors/404.vue')
             }
         ]
     },
     {
         path: '*',
-        name: 'home',
-        component: () => import('./layouts/Home.vue')
+        redirect: '/page/404',
+        name: 'not found',
     }
 ];
