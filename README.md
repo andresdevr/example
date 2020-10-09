@@ -68,13 +68,40 @@ foobar.singularize('phenomena') # returns 'phenomenon'
 Las pull request son bienvenidas siempre y cuando sigan las reglas de conducta las cuales indican seguir las convenciones y patrones de diseño definidos a continuación
 
 ### Convenciones
+- Todas las clases deben comenzar por mayúsculas  
+- Todas las interfaces deben tener el sufijo `Interface`
+- Todos repositorios deben tener el sufijo `Repository`  
+- Todos los decoradores deben tener el sufijo `Decorator`
+- Todos los viewPresenters deben tener el sufijo `ViewPresenter`
+- Todas las interfaces deben ser añadidos en la carpeta `app/Interfaces`
+- Todos los repositorios deben ser añadidos en la carpeta `app/Repositories`  
+- Todos los decoradores deben ser añadidos en la carpeta `app/Decorators` con la ruta del decorado que hacen, por ejemplo `app/Decorators/Cache/UserDecorator.php`  
+- Todos los viewPresenters deben ser añadidos en la carpeta `app/ViewPresenters`
+- Todos los traits deben ser añadidos en la carpeta `app/Traits/`  
+- Todos los modelos deben ser añadidos en la carpeta `app/Models/`
+- Todos los modelos deben tener un método llamado `presenter` que retorne una instancia del `ViewPresenter` relacionado a este modelo
+- Todos los modelos deben definir la propiedad `$fillable` para utilizar el método `create`
+- Todos las relaciones de modelos deben contar con un [feature test](https://laravel.com/docs/7.x/testing#creating-and-running-tests)  
+- Todos los modelos deben contar con:  
+  - Un [ViewPresenter](laraveles.com/vistas-mas-legibles-usando-presenters-en-laravel)  
+  - Un [recurso](laravel.com/docs/7.x/eloquent-resources) de eloquent  
+  - Un [controlador](laravel.com/docs/7.x/controllers#restful-partial-resource-routes) de tipo recurso API (opcional)  
+  - Un [recurso de colleción](https://laravel.com/docs/7.x/eloquent-resources#pagination) para datos paginados  
+  - Un [repositorio](medium.com/@cesiztel/repository-pattern-en-laravel-f66fcc9ea492) (Solo en caso de tener un controlador)  
+  - Un [decorador](dev.to/ahmedash95/design-patterns-in-php-decorator-with-laravel-5hk6) (Solo en caso de tener un controlador)  
+- Todos los controladores que interactuen con modelos directamente deben ser creados como [controladores de recursos API](laravel.com/docs/7.x/controllers#restful-partial-resource-routes)  
+- Todas las acciones que requieran de mas métodos ademas del CRUD deben ser definidos como [controladores de una sola acción](laravel.com/docs/7.x/controllers#single-action-controllers)  
+- Todas las rutas deben contar con un [request de validación](laravel.com/docs/7.x/validation#creating-form-requests)  
+- Todos los métodos de los controladores deben contar con un [unit test](https://laravel.com/docs/7.x/http-tests)
+- Todos los métodos de los controladores deben contar con un [dusk test](https://laravel.com/docs/7.x/dusk#getting-started)
+
 
 ### Patrones de diseño
 _Los links son meras referencias generales de los patrones_
-#### [Desarrollo por pruebas(TDD)](https://www.paradigmadigital.com/dev/tdd-como-metodologia-de-diseno-de-software/)
-#### [Patrón Repository](https://medium.com/@cesiztel/repository-pattern-en-laravel-f66fcc9ea492)
-#### [Patrón Decorator](https://dev.to/ahmedash95/design-patterns-in-php-decorator-with-laravel-5hk6)
-#### [Patrón ViewPresenter](https://laraveles.com/vistas-mas-legibles-usando-presenters-en-laravel/)
+#### [Desarrollo por pruebas(TDD)](www.paradigmadigital.com/dev/tdd-como-metodologia-de-diseno-de-software)
+#### [Patrón Repository](medium.com/@cesiztel/repository-pattern-en-laravel-f66fcc9ea492)
+#### [Patrón Decorator](dev.to/ahmedash95/design-patterns-in-php-decorator-with-laravel-5hk6)
+#### [Patrón ViewPresenter](laraveles.com/vistas-mas-legibles-usando-presenters-en-laravel)
 
 ## License
 Por definir
