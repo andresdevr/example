@@ -13,10 +13,10 @@ export const routes = [
         component: () => import('./layouts/FullPage.vue'),
         children: [
             {
-                path: '/full/login',
+                path: '/page/login',
                 name: 'login',
                 component: () => import('./views/login/Login.vue')
             }
         ]
-    }
+    },
 ];
