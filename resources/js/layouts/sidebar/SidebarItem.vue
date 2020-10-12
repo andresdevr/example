@@ -29,7 +29,6 @@ export default {
                 return this.item.route.name;
             },
             set: function (value) {
-                console.log(value);
             }
         },
         isActive: function () {

@@ -33,10 +33,23 @@ export default {
     },
     data() {
         return {
-            expandOnHover: false,
             mobile: "reduce",
-            reduce: false
         };
+    },
+    computed: {
+        width: function () {
+            return this.$store.getters.width;
+        },
+        expandOnHover: function () {
+            if (this.width < 1100)
+                return true;
+            return false;
+        },
+        reduce: function () {
+            if (this.width < 1100)
+                return true;
+            return false;
+        }
     }
 };
 </script>
