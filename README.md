@@ -128,7 +128,7 @@ Entre los distintos paquetes utilizados para agilizar el desarrollo del backend 
 Entre los distintos modulos y frameworks utilizados para el desarrollo de frontend tenemos  
 - [axios](https://github.com/axios/axios) Para peticiones http(disponible de manera global como `axios`) 
 - [vue](https://vuejs.org/) Para manipular las vistas con reactividad  
-- [vue-atlas](https://vue-atlas.com/documentation/introduction#quickstart) El framework de diseños principal, todos los componentes de encuentran de manera global
+- [buefy](https://buefy.org/documentation/autocomplete) El framework de diseños principal, todos los componentes se encuentran de manera global
 - [tailwindcss](https://tailwindcss.com) Para diseño responsivo y agil  
 - [vue-apexcharts](https://apexcharts.com/docs/vue-charts/) Para crear gráficos reactivos
 - [vue-clipboard2](https://www.npmjs.com/package/vue-clipboard2) Para realizar la operación de copiar de manera rápida
