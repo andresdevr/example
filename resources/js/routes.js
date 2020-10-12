@@ -11,15 +11,23 @@ export const routes = [
                 component: () => import('./views/home/Home')
             },
             {
-                path: '/users/list',
-                name: 'users-list',
-                component: () => import('./views/users/list/List')
+                path: '/users',
+                name: 'users',
+                component: () => import('./views/users/Users'),
+                children: [
+                    {
+                        path: '/users/list',
+                        name: 'users-list',
+                        component: () => import('./views/users/list/List')
+                    },
+                    {
+                        path: '/users/active',
+                        name: 'users-active',
+                        component: () => import('./views/users/active/Active')
+                    }
+                ]
             },
-            {
-                path: '/users/active',
-                name: 'users-active',
-                component: () => import('./views/users/active/Active')
-            }
+
         ]
 
     },

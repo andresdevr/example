@@ -18,21 +18,30 @@ export default {
     computed: {
         routes: {
             get: function () {
-                var matches = this.$router.currentRoute.matched;
-                return matches;
+                var matches = this.$route.matched;
+                return _.map(matches, 'name');
             },
             set: function () {
             }
         },
+        route: {
+            get: function () {
+                return this.item.route.name;
+            },
+            set: function (value) {
+                console.log(value);
+            }
+        },
         isActive: function () {
             var index = _.findIndex(this.routes, (route) => {
-                return this.$router.currentRoute.name == route;
+                return this.route== route;
             });
             if (index < 0)
                 return false;
             return true;
         },
     }
+
 }
 </script>
 
