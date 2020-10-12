@@ -114,5 +114,12 @@ _Los links son meras referencias generales de los patrones_
 #### [Patrón Decorator](https://dev.to/ahmedash95/design-patterns-in-php-decorator-with-laravel-5hk6)
 #### [Patrón ViewPresenter](https://laraveles.com/vistas-mas-legibles-usando-presenters-en-laravel)
 
+### Recursos
+
+#### Backend
+Entre los distintos paquetes utilizados para agilizar el desarrollo del 
+
+#### Frontend
+
 ## License
 Por definir
