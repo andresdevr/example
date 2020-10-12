@@ -44,6 +44,8 @@ Vue.mixin({
  */
 
 Vue.component('app', require('./layouts/App').default);
+Vue.component('b-card', require('./components/Card').default);
+
 
 //const files = require.context('./', true, /\.vue$/i)
 //files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
