@@ -130,6 +130,7 @@ Entre los distintos modulos y frameworks utilizados para el desarrollo de fronte
 - [font-awesome](https://fontawesome.com/) Los iconos a utilizar utilizados mediante componentes de [buefy](https://buefy.org/documentation/icon)
 - [vue](https://vuejs.org/) Para manipular las vistas con reactividad  
 - [buefy](https://buefy.org/documentation/autocomplete) El framework de diseños principal, todos los componentes se encuentran de manera global
+- [bulma](https://bulma.io/) Buefy dispone de todas las clases de este framework, utilizado para añadir nuevos componentes  
 - [tailwindcss](https://tailwindcss.com) Para diseño responsivo y agil  
 - [vue-apexcharts](https://apexcharts.com/docs/vue-charts/) Para crear gráficos reactivos
 - [vue-clipboard2](https://www.npmjs.com/package/vue-clipboard2) Para realizar la operación de copiar de manera rápida
