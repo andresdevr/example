@@ -14,7 +14,7 @@
 
 
             <b-menu-item icon="user" label="Perfil"></b-menu-item>
-            <b-menu-item icon="logout" label="Cerrar sesión"></b-menu-item>
+            <b-menu-item icon="sign-out-alt" label="Cerrar sesión"></b-menu-item>
 
             
         </b-menu-list>
