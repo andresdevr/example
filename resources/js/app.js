@@ -45,6 +45,7 @@ Vue.mixin({
 
 Vue.component('app', require('./layouts/App').default);
 Vue.component('b-card', require('./components/Card').default);
+Vue.component('b-header', require('./components/Header').default);
 
 
 //const files = require.context('./', true, /\.vue$/i)
