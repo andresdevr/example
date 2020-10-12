@@ -9,7 +9,6 @@ require('./bootstrap');
 window.Vue = require('vue');
 
 import Buefy from 'buefy'
-import 'buefy/dist/buefy.css'
 
 import VueRouter from 'vue-router';
 import { routes } from './routes';
