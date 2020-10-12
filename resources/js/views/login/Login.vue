@@ -11,7 +11,7 @@
             <b-checkbox v-model="remember" class="my-4">
                 Recordar sesión
             </b-checkbox>
-            <b-button type="is-primary" icon-left="sign-in-alt" expanded :disabled="!isFormValid">
+            <b-button type="is-primary" icon-left="sign-in-alt" expanded :disabled="!isFormValid" @click="login">
                 Iniciar sesión
             </b-button>
         </div>
@@ -34,6 +34,18 @@ export default {
             var email = this.email && validator.isEmail(this.email);
             var password = this.password;
             return email && password;
+        },
+        form: function () {
+            return {
+                email: this.email,
+                password: this.password,
+                remember: this.remember
+            };
+        }
+    },
+    methods: {
+        login: async function () {
+            await this.$store.dispatch('login', this.form);
         }
     }
 }

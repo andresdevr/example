@@ -3,7 +3,7 @@ import { validations } from './modules/validations';
 
 export const vuex = {
     state: {
-        appName: 'Quantic Development'
+        appName: 'ERP'
     },
     getters: {
         appName: state => {
