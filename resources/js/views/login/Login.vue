@@ -8,7 +8,7 @@
             <b-field label="Contraseña">
                 <b-input v-model="password" type="password" icon="key" placeholder="Contraseña"></b-input>
             </b-field>
-            <b-button type="is-primary" class="mt-5" icon-left="sign-in-alt" expanded>
+            <b-button type="is-primary" class="mt-5" icon-left="sign-in-alt" expanded :disabled="!isFormValid">
                 Iniciar sesión
             </b-button>
         </div>
@@ -21,9 +21,16 @@
 export default {
     data() {
         return {
-            email: null,
-            password: null,
+            email: '',
+            password: '',
             remember: false
+        }
+    },
+    computed: {
+        isFormValid: function () {
+            var email = this.email && validator.isEmail(this.email);
+            var password = this.password;
+            return email && password;
         }
     }
 }
