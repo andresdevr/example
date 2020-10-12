@@ -127,6 +127,7 @@ Entre los distintos paquetes utilizados para agilizar el desarrollo del backend 
 #### Frontend
 Entre los distintos modulos y frameworks utilizados para el desarrollo de frontend tenemos  
 - [axios](https://github.com/axios/axios) Para peticiones http(disponible de manera global como `axios`) 
+- [font-awesome](https://fontawesome.com/) Los iconos a utilizar utilizados mediante componentes de [buefy](https://buefy.org/documentation/icon)
 - [vue](https://vuejs.org/) Para manipular las vistas con reactividad  
 - [buefy](https://buefy.org/documentation/autocomplete) El framework de diseños principal, todos los componentes se encuentran de manera global
 - [tailwindcss](https://tailwindcss.com) Para diseño responsivo y agil  
