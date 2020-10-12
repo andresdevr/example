@@ -2,7 +2,7 @@
     <div class="sidebar-page">
         <section class="sidebar-layout">
              <b-sidebar
-                position="relative"
+                position="static"
                 :mobile="mobile"
                 :expand-on-hover="expandOnHover"
                 :reduce="reduce"
@@ -18,9 +18,14 @@
                 </div>
             </b-sidebar>
 
-            
-            <navbar></navbar>
-            <slot name="main"/>
+            <div class="w-full flex-col">
+
+                <navbar></navbar>
+                <slot name="main"/>
+            </div>
+            <div>
+
+            </div>
             
 
         </section>

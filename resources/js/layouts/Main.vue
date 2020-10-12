@@ -3,7 +3,7 @@
 
 
         <sidebar>
-
+                
             <template slot="main">
                 <router-view></router-view>
             </template>
