@@ -9,6 +9,16 @@ export const routes = [
                 path: '/home',
                 name: 'home',
                 component: () => import('./views/home/Home')
+            },
+            {
+                path: '/users/list',
+                name: 'users-list',
+                component: () => import('./views/users/list/List')
+            },
+            {
+                path: '/users/active',
+                name: 'users-active',
+                component: () => import('./views/users/active/Active')
             }
         ]
 
