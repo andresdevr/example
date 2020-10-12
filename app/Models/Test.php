@@ -1,11 +1,11 @@
 <?php
 
-namespace {{ namespace }};
+namespace App\Models;
 
 use App\Interfaces\PresenterInterface;
 use Illuminate\Database\Eloquent\Model;
 
-class {{ class }} extends Model implements PresenterInterface
+class Test extends Model implements PresenterInterface
 {
     protected $fillable = [];
 }

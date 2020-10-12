@@ -54,13 +54,10 @@ php artisan dusk # pruebas de navegado3
 
 
 ## Uso
+Para desarrollar el frontend recomiendo mantener un watcher encendido para compilar cambios
 
-```python
-import foobar
-
-foobar.pluralize('word') # returns 'words'
-foobar.pluralize('goose') # returns 'geese'
-foobar.singularize('phenomena') # returns 'phenomenon'
+```bash
+npm run watch
 ```
 
 ## Contribuir al desarrollo
@@ -105,6 +102,7 @@ Las pull request son bienvenidas siempre y cuando sigan las reglas de conducta l
 - El uso de servicios de terceros como [APIs](https://xataka.com/basics/api-que-sirve) se desarrollan en un [paquete externo](https://laravel.com/docs/7.x/packages) privado al repositorio
 - El envio de correos se delega a las [colas](https://laravel.com/docs/7.x/queues)
 - El uso de broadcasting se delega a las [colas](https://laravel.com/docs/7.x/queues)  
+- Al añadir cualquier paquete de desarrollo para backend o frontend, añadir una pequeña descripción en el apartado de Recursos
 
 
 ### Patrones de diseño
@@ -117,9 +115,30 @@ _Los links son meras referencias generales de los patrones_
 ### Recursos
 
 #### Backend
-Entre los distintos paquetes utilizados para agilizar el desarrollo del 
+Entre los distintos paquetes utilizados para agilizar el desarrollo del backend tenemos  
+- [barryvdh/laravel-dompdf](https://github.com/barryvdh/laravel-dompdf) Utilizado para generar los archivos pdf  
+- [maatwebsite/excel](https://github.com/Maatwebsite/Laravel-Excel) Utilizado para generar resumenes para excel  
+- [predis/predis](https://laravel.com/docs/7.x/cache#driver-prerequisites) Utilizado para conectar con  [Redis](https://redis.io/)
+- [pusher/pusher-php-server](https://laravel.com/docs/7.x/broadcasting#driver-prerequisites) Utilizado para conectar con [Pusher](https://pusher.com/)  
+- [tightenco/ziggy](https://github.com/tighten/ziggy) Utilizado oara obtener las rutas de laravel en js
+- [laravel/dusk](https://laravel.com/docs/7.x/dusk) Utilizado para los tests en navegador
 
 #### Frontend
-
+Entre los distintos modulos y frameworks utilizados para el desarrollo de frontend tenemos  
+- [axios](https://github.com/axios/axios) Para peticiones http(disponible de manera global como `axios`) 
+- [vue](https://vuejs.org/) Para manipular las vistas con reactividad  
+- [vue-atlas](https://vue-atlas.com/documentation/introduction#quickstart) El framework de diseños principal, todos los componentes de encuentran de manera global
+- [tailwindcss](https://tailwindcss.com) Para diseño responsivo y agil  
+- [vue-apexcharts](https://apexcharts.com/docs/vue-charts/) Para crear gráficos reactivos
+- [vue-clipboard2](https://www.npmjs.com/package/vue-clipboard2) Para realizar la operación de copiar de manera rápida
+- [vue-meta](https://vue-meta.nuxtjs.org/) Para manipular etiquetas meta como el titulo
+- [vue-router](https://router.vuejs.org/) Para la construccion de [SPA](https://es.wikipedia.org/wiki/Single-page_application)
+- [vue-cookies](https://github.com/cmp-cc/vue-cookies) Para realizar operaciones con las cookies de manera reactiva
+- [vue2-filters](https://github.com/freearhey/vue2-filters) Para aplicar mascaras de filtro a valores  
+- [vuex](https://vuex.vuejs.org/) Para almacenar información de manera general  
+- [lodash](https://lodash.com/docs/) Para operaciones varias con arrays y objetos
+- [validator](https://www.npmjs.com/package/validator) Para validar valores  
+- [laravel-echo](https://laravel.com/docs/7.x/broadcasting#installing-laravel-echo) Para escuchar canales de pusher(disponible de manera global como `Echo`)  
+- [ziggy](https://www.npmjs.com/package/ziggy-js) Para acceder a las rutas de laravel ([función](https://github.com/tighten/ziggy#usage) disponible de manera global como `route()`)
 ## License
 Por definir
