@@ -1,7 +1,7 @@
 <template>
-    <div class="flex items-center" :class="sizeHeader">
+    <div class="flex items-center w-full" :class="sizeHeader">
             <b-icon :pack="iconPack" :icon="icon" v-if="icon"/>
-            <b-image :src="src" :rounded="roundedImage" v-if="image"/>
+            <b-image :src="src" :rounded="roundedImage" v-if="image" :class="imageClasses"/>
         <h1 class="title" :class="sizeHeader">
             {{ title }}
         </h1>
@@ -15,9 +15,10 @@ export default {
         size: { type: Number, default: 1 },
         icon: { type: String, default: null },
         image: { type: String, default: null },
-        imageSize: { type: String, default: 'auto' },
+        imageClasses: { type: String, default: null },
+        iconClasses: { type: String, default: null },
         iconPack: { type: String, default: 'fas' },
-        roundedImage: { type: Boolean, default: false}
+        roundedImage: { type: Boolean, default: false }
     },
     computed: {
         sizeHeader: function () {
