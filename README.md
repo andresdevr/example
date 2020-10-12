@@ -121,7 +121,8 @@ Entre los distintos paquetes utilizados para agilizar el desarrollo del backend 
 - [predis/predis](https://laravel.com/docs/7.x/cache#driver-prerequisites) Utilizado para conectar con  [Redis](https://redis.io/)
 - [pusher/pusher-php-server](https://laravel.com/docs/7.x/broadcasting#driver-prerequisites) Utilizado para conectar con [Pusher](https://pusher.com/)  
 - [tightenco/ziggy](https://github.com/tighten/ziggy) Utilizado oara obtener las rutas de laravel en js
-- [laravel/dusk](https://laravel.com/docs/7.x/dusk) Utilizado para los tests en navegador
+- [laravel/dusk](https://laravel.com/docs/7.x/dusk) Utilizado para los tests en navegador  
+- [askedio/laravel-soft-cascade](https://github.com/Askedio/laravel-soft-cascade) Utilizado para eliminar en soft deletes en cascada
 
 #### Frontend
 Entre los distintos modulos y frameworks utilizados para el desarrollo de frontend tenemos  
