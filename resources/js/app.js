@@ -21,8 +21,10 @@ import VueCookies from 'vue-cookies'
 import route from 'ziggy';
 import { Ziggy } from './ziggy';
 
+import '@fortawesome/fontawesome-free/js/all.js';
+
 window.Vue.use(Buefy, {
-    defaultIconPack: 'fa',
+    defaultIconPack: 'fas',
 });
 window.Vue.use(VueRouter);
 window.Vue.use(Vuex);
