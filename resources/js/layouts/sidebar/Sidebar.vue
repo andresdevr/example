@@ -18,7 +18,9 @@
                 </div>
             </b-sidebar>
 
-            <slot />
+            <slot name="main"/>
+            
+
         </section>
     </div>
 </template>

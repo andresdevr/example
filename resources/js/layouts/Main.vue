@@ -1,16 +1,24 @@
 <template>
     <div>
+                <navbar></navbar>
+
         <sidebar>
-            <router-view></router-view>
+
+            <template slot="main">
+                <router-view></router-view>
+            </template>
+
         </sidebar>
     </div>
 </template>
 
 <script>
 import Sidebar from './sidebar/Sidebar';
+import Navbar from './navbar/Navbar';
 export default {
     components: {
-        Sidebar
+        Sidebar,
+        Navbar
     }
 }
 </script>
