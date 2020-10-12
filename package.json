@@ -28,7 +28,6 @@
         "validator": "^13.1.17",
         "vue": "^2.5.17",
         "vue-apexcharts": "^1.6.0",
-        "vue-atlas": "^2.1.8",
         "vue-clipboard2": "^0.3.1",
         "vue-cookies": "^1.7.4",
         "vue-meta": "^2.4.0",
