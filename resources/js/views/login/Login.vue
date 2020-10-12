@@ -29,6 +29,22 @@ export default {
             remember: false
         }
     },
+    beforeCreate() {
+        if (this.$cookies.isKey('session'))
+        {
+            var session = this.$cookies.get('session');
+            this.$store.commit('setSession', {
+                data: {
+                    id: session.id,
+                    name: session.name,
+                    email: session.email,
+                    avatar: session.avatar
+                }
+            });
+            this.$router.push({name: 'home'});
+        }
+
+    },
     computed: {
         isFormValid: function () {
             var email = this.email && validator.isEmail(this.email);

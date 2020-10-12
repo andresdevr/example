@@ -21,9 +21,9 @@ export const session = {
         },
         setSession(state, user) {
             state.id = user.data.id;
-            state.name = user.data.attributes.name;
-            state.email = user.data.attributes.email;
-            state.avatar = user.data.attributes.avatar;
+            state.name = user.data.name;
+            state.email = user.data.email;
+            state.avatar = user.data.avatar;
             Vue.$cookies.set('session', {
                 id: state.id,
                 name: state.name,

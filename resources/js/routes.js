@@ -4,6 +4,13 @@ export const routes = [
         path: '/',
         name: 'main',
         component: () => import('./layouts/Main.vue'),
+        children: [
+            {
+                path: '/home',
+                name: 'home',
+                component: () => import('./views/home/Home')
+            }
+        ]
 
     },
     {
