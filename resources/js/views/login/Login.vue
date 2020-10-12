@@ -26,7 +26,8 @@ export default {
         return {
             email: '',
             password: '',
-            remember: false
+            remember: false,
+            errors: []
         }
     },
     beforeCreate() {
@@ -61,7 +62,12 @@ export default {
     },
     methods: {
         login: async function () {
-            await this.$store.dispatch('login', this.form);
+            var response = await this.$store.dispatch('login', this.form);
+            if (response.status == 422)
+                    this.errors = response.errors;
+            if (response.status == 200)
+                this.$router.push({name: 'home'});
+
         }
     }
 }
