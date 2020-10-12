@@ -1,9 +1,7 @@
 <template>
     <div>
         <sidebar>
-
-        gfagf
-        <router-view></router-view>
+            <router-view></router-view>
         </sidebar>
     </div>
 </template>

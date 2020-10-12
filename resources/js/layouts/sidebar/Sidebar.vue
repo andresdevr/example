@@ -28,12 +28,13 @@
                                 <b-menu-item icon="account-box" label="Account data"></b-menu-item>
                                 <b-menu-item icon="home-account" label="Addresses"></b-menu-item>
                             </b-menu-item>
+
                         </b-menu-list>
                         <b-menu-list>
                             <b-menu-item label="Expo" icon="link"></b-menu-item>
                         </b-menu-list>
-                        <b-menu-list label="Actions">
-                            <b-menu-item icon="logout" label="Logout"></b-menu-item>
+                        <b-menu-list label="Acciones">
+                            <b-menu-item icon="logout" label="cerrar"></b-menu-item>
                         </b-menu-list>
                     </b-menu>
                 </div>
@@ -46,19 +47,26 @@
 
 <script>
 import SidebarItems from './navbar';
+import GroupItem from './GroupItem';
+import Item from './Item';
+
 export default {
-  data() {
-    return {
-        expandOnHover: false,
-        mobile: "reduce",
-        reduce: false
-    };
-  },
-    computed: {
-        items: function () {
-            return SidebarItems;
-        }
-  }
+    components: {
+        GroupItem,
+        Item
+    },
+    data() {
+        return {
+            expandOnHover: false,
+            mobile: "reduce",
+            reduce: false
+        };
+    },
+        computed: {
+            items: function () {
+                return SidebarItems;
+            }
+    }
 };
 </script>
 
