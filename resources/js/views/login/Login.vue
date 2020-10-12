@@ -8,7 +8,10 @@
             <b-field label="Contraseña">
                 <b-input v-model="password" type="password" icon="key" placeholder="Contraseña"></b-input>
             </b-field>
-            <b-button type="is-primary" class="mt-5" icon-left="sign-in-alt" expanded :disabled="!isFormValid">
+            <b-checkbox v-model="remember" class="my-4">
+                Recordar sesión
+            </b-checkbox>
+            <b-button type="is-primary" icon-left="sign-in-alt" expanded :disabled="!isFormValid">
                 Iniciar sesión
             </b-button>
         </div>
