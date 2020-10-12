@@ -1,6 +1,6 @@
 <template>
-    <div>
-                <navbar></navbar>
+    <div class="h-screen">
+
 
         <sidebar>
 
@@ -9,6 +9,7 @@
             </template>
 
         </sidebar>
+        
     </div>
 </template>
 

@@ -1,5 +1,5 @@
 <template>
-    <b-navbar>
+    <b-navbar class="h-full w-full">
         <template slot="brand">
             <b-navbar-item tag="router-link" :to="{ path: '/' }">
                 <img
@@ -28,12 +28,9 @@
         <template slot="end">
             <b-navbar-item tag="div">
                 <div class="buttons">
-                    <a class="button is-primary">
-                        <strong>Sign up</strong>
-                    </a>
-                    <a class="button is-light">
-                        Log in
-                    </a>
+                    
+                    <b-button type="is-info" icon-right="user" />
+                    <b-button type="is-primary" outlined icon-right="sign-out-alt" />
                 </div>
             </b-navbar-item>
         </template>

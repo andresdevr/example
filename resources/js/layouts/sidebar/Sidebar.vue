@@ -2,7 +2,7 @@
     <div class="sidebar-page">
         <section class="sidebar-layout">
              <b-sidebar
-                position="static"
+                position="relative"
                 :mobile="mobile"
                 :expand-on-hover="expandOnHover"
                 :reduce="reduce"
@@ -18,6 +18,8 @@
                 </div>
             </b-sidebar>
 
+            
+            <navbar></navbar>
             <slot name="main"/>
             
 
@@ -28,9 +30,11 @@
 <script>
 import Logo from './Logo';
 import Elements from './Elements';
+import Navbar from '../navbar/Navbar';
 export default {
     components: {
         Logo,
+        Navbar,
         Elements
     },
     data() {
