@@ -41,7 +41,6 @@ export const session = {
             commit('cleanSessionError');
             try {
                 var promise = await axios.post(route('login'), user);
-                console.log(543)
                 commit('setSession', promise.data);
                 return {
                     status: promise.status
