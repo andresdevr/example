@@ -10,33 +10,11 @@
                 open
             >
                 <div class="p-1 h-screen">
-                    <div class="block">
-                    <img
-                        src="https://raw.githubusercontent.com/buefy/buefy/dev/static/img/buefy-logo.png"
-                        alt="Lightweight UI components for Vue.js based on Bulma"
-                    />
-                    </div>
-                    <b-menu class="is-custom-mobile">
-                        <b-menu-list label="Menu">
-                            <b-menu-item icon="information-outline" label="Info"></b-menu-item>
-                            <b-menu-item active expanded icon="settings" label="Administrator">
-                                <b-menu-item icon="account" label="Users"></b-menu-item>
-                                <b-menu-item icon="cellphone-link" label="Devices"></b-menu-item>
-                                <b-menu-item icon="cash-multiple" label="Payments" disabled></b-menu-item>
-                            </b-menu-item>
-                            <b-menu-item icon="account" label="My Account">
-                                <b-menu-item icon="account-box" label="Account data"></b-menu-item>
-                                <b-menu-item icon="home-account" label="Addresses"></b-menu-item>
-                            </b-menu-item>
-
-                        </b-menu-list>
-                        <b-menu-list>
-                            <b-menu-item label="Expo" icon="link"></b-menu-item>
-                        </b-menu-list>
-                        <b-menu-list label="Acciones">
-                            <b-menu-item icon="logout" label="cerrar"></b-menu-item>
-                        </b-menu-list>
-                    </b-menu>
+                    <logo>
+                    </logo>
+                
+                    <elements>
+                    </elements>
                 </div>
             </b-sidebar>
 
@@ -46,14 +24,12 @@
 </template>
 
 <script>
-import SidebarItems from './navbar';
-import GroupItem from './GroupItem';
-import Item from './Item';
-
+import Logo from './Logo';
+import Elements from './Elements';
 export default {
     components: {
-        GroupItem,
-        Item
+        Logo,
+        Elements
     },
     data() {
         return {
@@ -61,11 +37,6 @@ export default {
             mobile: "reduce",
             reduce: false
         };
-    },
-        computed: {
-            items: function () {
-                return SidebarItems;
-            }
     }
 };
 </script>

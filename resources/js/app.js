@@ -44,6 +44,7 @@ Vue.mixin({
  */
 
 Vue.component('app', require('./layouts/App').default);
+Vue.component('sidebar-item', require('./layouts/sidebar/SidebarItem').default);
 Vue.component('b-card', require('./components/Card').default);
 Vue.component('b-header', require('./components/Header').default);
 
