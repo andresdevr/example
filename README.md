@@ -103,6 +103,7 @@ Las pull request son bienvenidas siempre y cuando sigan las reglas de conducta l
 - El envio de correos se delega a las [colas](https://laravel.com/docs/7.x/queues)
 - El uso de broadcasting se delega a las [colas](https://laravel.com/docs/7.x/queues)  
 - Al añadir cualquier paquete de desarrollo para backend o frontend, añadir una pequeña descripción en el apartado de Recursos
+- Toda operación de guardar modelos masivamente, debe mandarse al job `SaveModel' pasando la instancia del modelo a guardar
 
 
 ### Patrones de diseño
