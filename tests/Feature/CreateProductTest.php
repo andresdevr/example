@@ -13,7 +13,7 @@ class CreateProductTest extends TestCase
     /**
      * @test
      */
-    public function authtenticated_users_can_create_products()
+    public function authenticated_users_can_create_products()
     {
         $user = factory(User::class)->create();
         
