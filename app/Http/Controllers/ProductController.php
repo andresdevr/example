@@ -3,10 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Http\Resources\ProductResource;
-use App\Interfaces\ModelInterface;
 use App\Interfaces\ProductsInterface;
 use App\Models\Product;
-use App\Repositories\ProductsRepository;
 use Illuminate\Http\Request;
 
 class ProductController extends Controller
