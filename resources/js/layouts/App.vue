@@ -12,8 +12,10 @@ export default {
         
     },
     created() {
-        if (this.doNotHasSession)
-            this.$router.push({ name: 'login' });
+        if (this.doNotHasSession && window.location.pathname != '/page/login')
+            this.$router.push({ name: 'login', query: {verification: true} });
+        else
+            this.$router.go(1);
     },
     methods: {
         listenBrowserSize: function () {
