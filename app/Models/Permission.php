@@ -13,4 +13,9 @@ class Permission extends Model implements PresenterInterface
     {
 
     }
+
+    public function users()
+    {
+        return $this->belongsToMany(User::class);
+    }
 }

@@ -43,4 +43,9 @@ class User extends Authenticatable implements PresenterInterface
     {
         return new UserPresenter($this);
     }
+
+    public function permissions()
+    {
+        return $this->belongsToMany(Permission::class);
+    }
 }
