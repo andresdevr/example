@@ -39,7 +39,7 @@ export default {
     },
     data() {
         return {
-            user: null,
+            user: {},
             activeTab: 0
         }
     },

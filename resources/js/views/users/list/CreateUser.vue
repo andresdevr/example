@@ -55,7 +55,6 @@ export default {
         create: async function () {
             if (this.validation) {
                 status = await this.$store.dispatch('createUser', this.form);
-                console.log(status);
             }
 
             
