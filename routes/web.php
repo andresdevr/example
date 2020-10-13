@@ -8,6 +8,9 @@ Auth::routes(['verify' => true, 'register' => false]);
 
 //example
 Route::apiResource('products', ProductController::class)->middleware('ajax');
+
+
+
 Route::apiResource('users', UserController::class)->middleware('ajax');
 
 
