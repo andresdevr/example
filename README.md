@@ -32,7 +32,7 @@ php artisan event:clear
 php artisan optimize:clear
 php artisan routes:clear
 php artisan view:clear
-php artisan ziggy:generate
+php artisan ziggy:generate resources/js/ziggy.js
 npm install
 npm run dev
 ```
