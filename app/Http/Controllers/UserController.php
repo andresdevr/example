@@ -7,7 +7,7 @@ use App\Interfaces\UsersInterface;
 use App\Models\User;
 use Illuminate\Http\Request;
 
-class UsersInterfaceController extends Controller
+class UserController extends Controller
 {
 
     protected $users;
