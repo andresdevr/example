@@ -7,11 +7,16 @@ use Illuminate\Support\Facades\Route;
 Auth::routes(['verify' => true, 'register' => false]);
 
 //example
-Route::apiResource('products', ProductController::class)->middleware('ajax');
+
+
+Route::prefix('ajax')->group(function () {
+
+    Route::apiResource('products', ProductController::class)->middleware('ajax');
+    Route::apiResource('users', UserController::class)->middleware('ajax');
+});
 
 
 
-Route::apiResource('users', UserController::class)->middleware('ajax');
 
 
 //SPA route

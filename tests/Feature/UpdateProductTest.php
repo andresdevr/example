@@ -26,7 +26,7 @@ class UpdateProductTest extends TestCase
             'price' => 'new price'
         ];
 
-        $response = $this->actingAs($user)->putJson('/products/' . $product->id, $new);
+        $response = $this->actingAs($user)->putJson(route('products.update', ['product' => $product->id]), $new);
 
         $response->assertJson(['data' => [
             'id' => $product->id,

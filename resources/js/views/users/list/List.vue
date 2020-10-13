@@ -1,5 +1,6 @@
-<template class="p-24">
-    <div class="m-5">
+<template>
+    <div class="container">
+        gfdsgf
     </div>
 </template>
 

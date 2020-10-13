@@ -23,7 +23,7 @@ class CreateUserTest extends TestCase
             'password' => 'test'
         ];
 
-        $response = $this->actingAs($user)->postJson('/users', $request);
+        $response = $this->actingAs($user)->postJson(route('users.store'), $request);
 
         $response->assertStatus(201);
 
