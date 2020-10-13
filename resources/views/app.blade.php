@@ -19,7 +19,7 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 <body>
-    <div id="app">
+    <div id="app" class="bg-gray-200 bg-opacity-75">
         <app>
         </app>
     </div>
