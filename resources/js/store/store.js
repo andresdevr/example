@@ -25,6 +25,17 @@ export const vuex = {
         },
         height: state => {
             return state.height;
+        },
+        media: state => {
+            if (state.width >= 1280)
+                return 'xl';
+            if (state.width >= 1024)
+                return 'lg';
+            if (state.width >= 768)
+                return 'md';
+            if (state.width >= 640)
+                return 'sm';
+            return 'xs';
         }
     },
     modules: {
