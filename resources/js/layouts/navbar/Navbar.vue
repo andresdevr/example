@@ -41,7 +41,7 @@
                     </b-tooltip>
 
 
-                    <b-button type="is-primary" outlined icon-right="sign-out-alt" />
+                    <b-button type="is-primary" outlined icon-right="sign-out-alt" @click="logout()" />
                 </div>
             </b-navbar-item>
         </template>
@@ -53,6 +53,19 @@ export default {
     computed: {
         username: function () {
             return this.$store.getters.username;
+        }
+    },
+    methods: {
+        logout: function () {
+            this.$buefy.dialog.confirm({
+                    title: 'Cerrar sesión',
+                    message: '¿Estás seguro de querer cerrar sesión?',
+                    confirmText: 'Cerrar sesión',
+                    cancelText: 'Cancelar',
+                    type: 'is-danger',
+                    hasIcon: true,
+                    onConfirm: () => this.$store.dispatch('logout')
+                })
         }
     }
 }

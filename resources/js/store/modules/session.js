@@ -32,8 +32,12 @@ export const session = {
             }, '120MIN');
 
         },
-        clearSession(state, user) {
-
+        clearSession(state) {
+            state.id = null;
+            state.name = null;
+            state.email = null;
+            state.avatar = null;
+            Vue.$cookies.remove('session');
         }
     },
     actions: {
@@ -55,8 +59,22 @@ export const session = {
                 };
             }
         },
-        logout({ commit }) {
-
+        async logout({ commit }) {
+            try {
+                var promise = await axios.post(route('logout'));
+                commit('clearSession');
+                return {
+                    status: promise.status
+                };
+            }
+            catch (error) {
+                commit('setSessionError', error.response.data.message);
+                return {
+                    status: error.response.status,
+                    error: error.response.data.message,
+                    errors: error.response.data.errors
+                };
+            }
         }
     },
     getters: {
