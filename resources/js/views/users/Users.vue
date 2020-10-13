@@ -4,7 +4,9 @@
 
 <script>
 export default {
-
+    beforeCreate() {
+        this.$store.dispatch('getUsers');
+    }
 }
 </script>
 

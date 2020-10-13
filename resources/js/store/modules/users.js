@@ -16,7 +16,7 @@ export const users = {
         async getUsers({ commit }) {
             try {
                 var promise = await axios.get(route('users.index'));
-                commit(setUsers, promise.data);
+                commit('setUsers', promise.data.data);
                 return {
                     status: promise.status
                 }
