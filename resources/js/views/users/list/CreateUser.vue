@@ -55,6 +55,11 @@ export default {
         create: async function () {
             if (this.validation) {
                 status = await this.$store.dispatch('createUser', this.form);
+                this.$buefy.dialog.alert({
+                    title: 'Usuario creado',
+                    message: 'Se ha enviado un correo de confirmación al correo <b>' + this.form.email + '</b>!',
+                    confirmText: 'Cerrar'
+                });
             }
 
             

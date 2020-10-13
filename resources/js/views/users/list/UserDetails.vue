@@ -11,10 +11,10 @@
             {{ email }}
         </h4>
         <div class="w-full flex justify-center" v-if="email">
-            <b-button type="is-info" class="mr-2">
+            <b-button type="is-info" class="mr-2" @click="showEdit()">
                 Editar
             </b-button>
-            <b-button type="is-warning" class="ml-2">
+            <b-button type="is-warning" class="ml-2" @click="showPermissions()">
                 Permisos
             </b-button>
         </div>
@@ -37,6 +37,14 @@ export default {
         },
         email: function () {
             return this.user.email;
+        }
+    },
+    methods: {
+        showEdit: function () {
+
+        },
+        showPermission: function () {
+            
         }
     }
 }
