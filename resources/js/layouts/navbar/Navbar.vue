@@ -29,7 +29,14 @@
             <b-navbar-item tag="div">
                 <div class="buttons">
                     
-                    <b-button type="is-info" icon-right="user" />
+                    <b-tooltip position="is-bottom" multilined>
+                        <b-button type="is-info" icon-right="user" />
+                        <template v-slot:content>
+                            Test
+                        </template>
+                    </b-tooltip>
+
+
                     <b-button type="is-primary" outlined icon-right="sign-out-alt" />
                 </div>
             </b-navbar-item>
