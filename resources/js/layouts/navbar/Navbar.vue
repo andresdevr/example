@@ -29,10 +29,14 @@
             <b-navbar-item tag="div">
                 <div class="buttons">
                     
-                    <b-tooltip position="is-bottom" multilined>
+                    <b-tooltip position="is-bottom" multilined animated>
                         <b-button type="is-info" icon-right="user" />
                         <template v-slot:content>
-                            Test
+                            <div>
+                                <h3>
+                                    {{ username }}
+                                </h3>
+                            </div>
                         </template>
                     </b-tooltip>
 
@@ -46,7 +50,11 @@
 
 <script>
 export default {
-
+    computed: {
+        username: function () {
+            return this.$store.getters.username;
+        }
+    }
 }
 </script>
 
