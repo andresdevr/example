@@ -60,6 +60,9 @@ export const session = {
         }
     },
     getters: {
+        userId: state => {
+            return state.id;
+        },
         sessionError: state => {
             return state.sessionError;
         },
