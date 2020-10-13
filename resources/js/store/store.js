@@ -1,5 +1,6 @@
 import { session } from './modules/session';
 import { validations } from './modules/validations';
+import { users } from './modules/users';
 
 export const vuex = {
     state: {
@@ -28,7 +29,8 @@ export const vuex = {
     },
     modules: {
         validations,
-        session
+        session,
+        users
     },
     strict: process.env.NODE_ENV !== 'production'
 };
