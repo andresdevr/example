@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use App\Interfaces\PresenterInterface;
+use App\Presenters\PermissionPresenter;
 use Illuminate\Database\Eloquent\Model;
 
 class Permission extends Model implements PresenterInterface
@@ -11,7 +12,7 @@ class Permission extends Model implements PresenterInterface
 
     public function present()
     {
-
+        return new PermissionPresenter($this);
     }
 
     public function users()
