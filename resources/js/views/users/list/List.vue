@@ -10,7 +10,7 @@
                 
             </b-tab-item>
 
-            <b-tab-item label="Usuario Seleccionado">
+            <b-tab-item label="Seleccionado">
 
                 <user-details :user="user">
                 </user-details>
