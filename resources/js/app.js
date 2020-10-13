@@ -63,7 +63,7 @@ Vue.component('b-header', require('./components/Header').default);
 
 const store = new Vuex.Store(vuex);
 
-const router = new VueRouter({
+export const router = new VueRouter({
     mode: "history",
     routes
 });

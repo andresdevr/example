@@ -1,5 +1,7 @@
-import Vue from 'vue'
-import VueCookies from 'vue-cookies'
+import Vue from 'vue';
+import VueCookies from 'vue-cookies';
+import { router } from '../../app';
+
 Vue.use(VueCookies);
 
 export const session = {
@@ -38,6 +40,7 @@ export const session = {
             state.email = null;
             state.avatar = null;
             Vue.$cookies.remove('session');
+            router.push({ name: 'login' });
         }
     },
     actions: {
