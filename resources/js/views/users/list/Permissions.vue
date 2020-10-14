@@ -1,7 +1,7 @@
 <template>
     <div class="content">
         <vue-scroll :ops="scrollOptions"> 
-            <b-table :data="permissions" hoverable focusable>
+            <b-table :data="processedPermissions" hoverable focusable>
                 <b-table-column field="id" label="ID" width="40" numeric v-slot="props">
                 {{ props.row.id }}
                 </b-table-column>
@@ -10,7 +10,15 @@
                     {{ props.row.display }}
                 </b-table-column>
 
-                
+                <b-table-column label="Estado" v-slot="props">
+                    <b-button type="is-success is-light" icon-left="lock-open" v-show="props.row.hasPermission" @click="togglePermission(props.row.id)">
+                        Otorgado
+                    </b-button>
+                    <b-button type="is-danger is-light" icon-left="lock" v-show="!props.row.hasPermission" @click="togglePermission(props.row.id)">
+                        Denegado
+                    </b-button>
+
+                </b-table-column>
 
             </b-table>
         </vue-scroll>
@@ -51,6 +59,11 @@ export default {
                 permission.hasPermission = index < 0 ? false : true;
                 return permission;
             });
+        }
+    },
+    methods: {
+        togglePermission: function (id) {
+            this.$store.dispatch('toglePermission', id);
         }
     }
 }
