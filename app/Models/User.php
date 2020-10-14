@@ -45,7 +45,7 @@ class User extends Authenticatable implements PresenterInterface, MustVerifyEmai
      * @var array
      */
     protected $with = [
-        'permissions'
+        'permissions', 'sessions'
     ];
 
     public function present()
@@ -56,5 +56,10 @@ class User extends Authenticatable implements PresenterInterface, MustVerifyEmai
     public function permissions()
     {
         return $this->belongsToMany(Permission::class);
+    }
+
+    public function sessions()
+    {
+        return $this->hasMany(Session::class);
     }
 }
