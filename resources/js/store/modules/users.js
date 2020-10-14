@@ -1,5 +1,3 @@
-import { use } from "browser-sync";
-
 export const users = {
     namespaced: false,
     state: () => ({
@@ -49,6 +47,22 @@ export const users = {
                 }
             } catch (error) {
                 commit('setUsersError', error.response.data.message);
+                return {
+                    status: error.response.status,
+                    error: error.response.data.message,
+                    errors: error.response.data.errors
+                };
+            }
+        },
+        async updateUser({ commit }, user) {
+            try {
+                var promise = await axios.put(route('users.update', { id: user.id }));
+                commit('updateUser', promise.data.data);
+                return {
+                    status: promise.status
+                }
+            } catch (error) {
+                commit('setUsersError', promise.data.data);
                 return {
                     status: error.response.status,
                     error: error.response.data.message,

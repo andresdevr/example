@@ -52,7 +52,7 @@ export default {
         validation: function () {
             var name = this.newUser.name;
             var email = this.newUser.email && validator.isEmail(this.newUser.email);
-            var password = this.newUser.password && this.newUser.password == this.newUser.confirmPassword;
+            var password = !this.newUser.password || this.newUser.password == this.newUser.confirmPassword;
 
             return name && email && password;
 
