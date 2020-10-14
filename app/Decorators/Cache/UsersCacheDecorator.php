@@ -9,7 +9,7 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Cache;
 
-class UsersCacheDecorator implements ModelInterface, UsersInterface
+class UsersCacheDecorator implements UsersInterface
 {
     protected $users;
 

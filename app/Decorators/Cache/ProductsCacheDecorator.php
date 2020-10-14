@@ -8,7 +8,7 @@ use App\Repositories\ProductsRepository;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Cache;
 
-class ProductsCacheDecorator implements ModelInterface, ProductsInterface
+class ProductsCacheDecorator implements ProductsInterface
 {
     protected $products;
 
