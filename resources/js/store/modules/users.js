@@ -1,3 +1,5 @@
+import { use } from "browser-sync";
+
 export const users = {
     namespaced: false,
     state: () => ({
@@ -13,6 +15,12 @@ export const users = {
         },
         addUser(state, user) {
             state.users.push(user);
+        },
+        updateUser(state, data) {
+            var user = _.find(state.users, (user) => {
+                return data.id == user.id;
+            });
+            Object.assign(user, data);
         }
     },
     actions: {
