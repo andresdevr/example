@@ -1,28 +1,26 @@
 <template>
-    <div class="content">
-        <vue-scroll :ops="scrollOptions"> 
-            <b-table :data="processedPermissions" hoverable focusable>
-                <b-table-column field="id" label="ID" width="40" numeric v-slot="props">
-                {{ props.row.id }}
-                </b-table-column>
+    <vue-scroll :ops="scrollOptions"> 
+        <b-table :data="processedPermissions" hoverable focusable>
+            <b-table-column field="id" label="ID" width="40" numeric v-slot="props">
+            {{ props.row.id }}
+            </b-table-column>
 
-                <b-table-column field="first_name" label="First Name" v-slot="props">
-                    {{ props.row.display }}
-                </b-table-column>
+            <b-table-column field="first_name" label="First Name" v-slot="props">
+                {{ props.row.display }}
+            </b-table-column>
 
-                <b-table-column label="Estado" v-slot="props">
-                    <b-button type="is-success is-light" icon-left="lock-open" v-show="props.row.hasPermission" @click="togglePermission(props.row.id)">
-                        Otorgado
-                    </b-button>
-                    <b-button type="is-danger is-light" icon-left="lock" v-show="!props.row.hasPermission" @click="togglePermission(props.row.id)">
-                        Denegado
-                    </b-button>
+            <b-table-column label="Estado" v-slot="props">
+                <b-button type="is-success is-light" icon-left="lock-open" v-show="props.row.hasPermission" @click="togglePermission(props.row.id)">
+                    Otorgado
+                </b-button>
+                <b-button type="is-danger is-light" icon-left="lock" v-show="!props.row.hasPermission" @click="togglePermission(props.row.id)">
+                    Denegado
+                </b-button>
 
-                </b-table-column>
+            </b-table-column>
 
-            </b-table>
-        </vue-scroll>
-    </div>
+        </b-table>
+    </vue-scroll>
 </template>
 
 <script>

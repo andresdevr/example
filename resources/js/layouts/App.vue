@@ -9,10 +9,8 @@ export default {
         this.$store.commit('setWidth', window.innerWidth || document.body.clientWidth);
         this.$store.commit('setHeight', window.innerHeight || document.body.clientHeight);
         window.onresize = () => this.listenBrowserSize();
-        
-    },
-    beforeCreate() {
         this.$store.dispatch('checkSession');
+        
     },
     methods: {
         listenBrowserSize: function () {
