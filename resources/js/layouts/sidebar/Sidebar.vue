@@ -44,7 +44,7 @@ export default {
     },
     data() {
         return {
-            mobile: "reduce",
+            mobile: "hide",
         };
     },
     computed: {
