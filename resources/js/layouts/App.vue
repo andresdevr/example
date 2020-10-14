@@ -11,11 +11,8 @@ export default {
         window.onresize = () => this.listenBrowserSize();
         
     },
-    created() {
-        if (this.doNotHasSession && window.location.pathname != '/page/login')
-            this.$router.push({ name: 'login', query: {verification: true} });
-        else
-            this.$router.go(1);
+    beforeCreate() {
+        this.$store.dispatch('checkSession');
     },
     methods: {
         listenBrowserSize: function () {
