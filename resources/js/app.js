@@ -18,6 +18,8 @@ import { vuex } from './store/store';
 
 import VueCookies from 'vue-cookies';
 
+import vuescroll from 'vuescroll';
+
 import route from 'ziggy';
 import { Ziggy } from './ziggy';
 
@@ -29,6 +31,7 @@ window.Vue.use(Buefy, {
 window.Vue.use(VueRouter);
 window.Vue.use(Vuex);
 window.Vue.use(VueCookies);
+window.Vue.use(vuescroll);
 
 Vue.mixin({
     methods: {

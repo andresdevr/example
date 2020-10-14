@@ -133,7 +133,7 @@ Entre los distintos modulos y frameworks utilizados para el desarrollo de fronte
 - [buefy](https://buefy.org/documentation/autocomplete) El framework de diseños principal, todos los componentes se encuentran de manera global
 - [bulma](https://bulma.io/) Buefy dispone de todas las clases de este framework, utilizado para añadir nuevos componentes  
 - [tailwindcss](https://tailwindcss.com) Para diseño responsivo y agil 
-- [vuebar](http://github.serafin.io/vuebar/) Para crear scroll virtual de manera rapida   
+- [vuecroll](https://github.com/YvesCoding/vuescroll) Para crear scroll virtual de manera rapida   
 - [vue-apexcharts](https://apexcharts.com/docs/vue-charts/) Para crear gráficos reactivos
 - [vue-clipboard2](https://www.npmjs.com/package/vue-clipboard2) Para realizar la operación de copiar de manera rápida
 - [vue-meta](https://vue-meta.nuxtjs.org/) Para manipular etiquetas meta como el titulo
