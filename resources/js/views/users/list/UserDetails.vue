@@ -18,12 +18,32 @@
                 Permisos
             </b-button>
         </div>
+        <b-collapse :open="editCollapse" id="editCollapse">
+            <edit :user="user">
+            </edit>
+        </b-collapse>
+        <b-collapse :open="permissionCollapse" id="permissionCollapse">
+            <permissions :user="user">
+            </permissions>
+        </b-collapse>
     </div>
 </template>
 
 <script>
+import Permissions from './Permissions';
+import Edit from './Edit';
 export default {
+    components: {
+        Permissions,
+        Edit
+    },
     props: ['user'],
+    data() {
+        return {
+            permissionCollapse: false,
+            editCollapse: false
+        }
+    },
     computed: {
         image: function () {
             if (this.user.avatar)
@@ -41,10 +61,12 @@ export default {
     },
     methods: {
         showEdit: function () {
-
+            this.permissionCollapse = false;
+            this.editCollapse = true;
         },
-        showPermission: function () {
-            
+        showPermissions: function () {
+            this.editCollapse = false;
+            this.permissionCollapse = true;
         }
     }
 }
