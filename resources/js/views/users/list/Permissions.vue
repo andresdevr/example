@@ -1,19 +1,46 @@
 <template>
     <div class="content">
-        <h3>
-            Permisos
-        </h3>
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br/>
-            Nulla accumsan, metus ultrices eleifend gravida, nulla nunc varius lectus, nec rutrum justo nibh eu lectus. <br/>
-            Ut vulputate semper dui. Fusce erat odio, sollicitudin vel erat vel, interdum mattis neque.
-        </p>
+        <vue-scroll :ops="scrollOptions"> 
+            <b-table :data="permissions" hoverable focusable>
+                <b-table-column field="id" label="ID" width="40" numeric v-slot="props">
+                {{ props.row.id }}
+                </b-table-column>
+
+                <b-table-column field="first_name" label="First Name" v-slot="props">
+                    {{ props.row.display }}
+                </b-table-column>
+
+                
+
+            </b-table>
+        </vue-scroll>
     </div>
 </template>
 
 <script>
 export default {
-    props: ['user']
+    props: ['user'],
+    data() {
+        return {
+            selected: {},
+            scrollOptions: {
+                vuescroll: {},
+                scrollPanel: {
+                    maxHeight: 400
+                },
+                rail: {},
+                bar: {
+                    background: '#8c67ef',
+                    size: '3px'
+                }  
+            }
+        }
+    },
+    computed: {
+        permissions: function () {
+            return this.$store.getters.permissions;
+        }
+    }
 }
 </script>
 
