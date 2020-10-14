@@ -1,6 +1,8 @@
 <template>
-    <b-table :data="data" :columns="columns" :selected.sync="selected" focusable>
-    </b-table>
+    <div>
+        <b-table :data="data" :columns="columns" :selected.sync="selected" focusable>
+        </b-table>
+    </div>
 </template>
 
 <script>
@@ -9,17 +11,14 @@
         data() {
             return {
                 selected: {},
-                columns: [
-                    {
-                        field: 'id',
-                        label: 'ID',
-                        width: '40',
-                        numeric: true
-                    },
-                    {
-                        field: 'avatar',
-                        label: 'Avatar',
-                    },
+            }
+        },
+        computed: {
+            media: function () {
+
+            },
+            columns: function () {
+                var columns = [
                     {
                         field: 'name',
                         label: 'Name',
@@ -30,6 +29,19 @@
                         centered: true
                     }
                 ]
+                if (this.$store.getters.media == 'xl' || this.$store.getters.media == 'lg' || this.$store.getters.media == 'md')
+                {
+                    columns.unshift({
+                        field: 'avatar',
+                        label: 'Avatar'
+                    });
+                    columns.unshift({
+                        field: 'id',
+                        label: 'ID'
+                    });
+                }
+                
+                return columns;
             }
         },
         watch: {
