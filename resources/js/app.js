@@ -16,7 +16,9 @@ import { routes } from './routes';
 import Vuex from 'vuex';
 import { vuex } from './store/store';
 
-import VueCookies from 'vue-cookies'
+import VueCookies from 'vue-cookies';
+
+import Vuebar from 'vuebar';
 
 import route from 'ziggy';
 import { Ziggy } from './ziggy';
@@ -28,7 +30,8 @@ window.Vue.use(Buefy, {
 });
 window.Vue.use(VueRouter);
 window.Vue.use(Vuex);
-Vue.use(VueCookies);
+window.Vue.use(VueCookies);
+Vue.use(Vuebar);
 
 Vue.mixin({
     methods: {
