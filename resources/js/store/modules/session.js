@@ -12,7 +12,7 @@ export const session = {
         name: null,
         email: null,
         avatar: null,
-        permissions: null
+        userPermissions: null
     }),
     mutations: {
         cleanSessionError(state) {
@@ -26,6 +26,7 @@ export const session = {
             state.name = user.data.name;
             state.email = user.data.email;
             state.avatar = user.data.avatar;
+            state.userPermissions = user.data.permissions;
             Vue.$cookies.set('session', {
                 id: state.id,
                 name: state.name,
