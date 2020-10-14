@@ -42,6 +42,15 @@ export default {
         },
         userPermissions: function () {
             return this.user.permissions;
+        },
+        processedPermissions: function () {
+            return _.map(this.permissions, (permission) => {
+                var index = _.findIndex(this.userPermissions, (userPermission) => {
+                    return permission.id == userPermission.id;
+                });
+                permission.hasPermission = index < 0 ? false : true;
+                return permission;
+            });
         }
     }
 }
