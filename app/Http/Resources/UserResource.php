@@ -20,6 +20,7 @@ class UserResource extends JsonResource
             'email' => $this->email,
             'avatar' => $this->avatar,
             'verified_at' => $this->email_verified_at,
+            'permissions' => PermissionResource::collection($this->permissions)
         ];
     }
 }

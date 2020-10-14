@@ -39,6 +39,15 @@ class User extends Authenticatable implements PresenterInterface, MustVerifyEmai
         'email_verified_at' => 'datetime',
     ];
 
+    /**
+     * The relatinsships preloaded
+     * 
+     * @var array
+     */
+    protected $with = [
+        'permissions'
+    ];
+
     public function present()
     {
         return new UserPresenter($this);
