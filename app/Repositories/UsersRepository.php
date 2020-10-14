@@ -40,8 +40,12 @@ class UsersRepository implements ModelInterface, UsersInterface
     {
         $user->name = $request->name;
         $user->email = $request->email;
-        $user->password = $request->password;
-        $user->avatar = $request->avatar;
+        if ($request->password) {
+            $user->password = Hash::make($request->password);
+        }
+        if ($request->avatar) {
+            $user->avatar = $request->avatar;
+        }
         $user->save();
         return $user;
     }

@@ -56,7 +56,7 @@ export const users = {
         },
         async updateUser({ commit }, user) {
             try {
-                var promise = await axios.put(route('users.update', { id: user.id }));
+                var promise = await axios.put(route('users.update', { id: user.id }), user);
                 commit('updateUser', promise.data.data);
                 return {
                     status: promise.status
