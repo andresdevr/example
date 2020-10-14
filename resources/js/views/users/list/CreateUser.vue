@@ -9,11 +9,11 @@
             </b-input>
         </b-field>
         <b-field label="Contraseña">
-            <b-input placeholder="alguien@example.com" type="password" icon="key" password-reveal icon-clickable v-model="password" required>
+            <b-input placeholder="password" type="password" icon="key" password-reveal icon-clickable v-model="password" required>
             </b-input>
         </b-field>
         <b-field label="Confirmar contraseña" v-show="password">
-            <b-input placeholder="alguien@example.com" type="password" icon="key" password-reveal icon-clickable v-model="confirmPassword" required>
+            <b-input placeholder="password" type="password" icon="key" password-reveal icon-clickable v-model="confirmPassword" required>
             </b-input>
         </b-field>
         <div class="w-full flex justify-end">
