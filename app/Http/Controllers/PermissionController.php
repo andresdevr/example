@@ -16,7 +16,7 @@ class PermissionController extends Controller
      */
     public function __invoke(PermissionInterface $permissions, Request $request)
     {
-        $permissions = $this->permissions->index();
+        $permissions = $permissions->index();
         return PermissionResource::collection($permissions);
     }
 }

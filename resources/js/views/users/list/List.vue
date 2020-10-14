@@ -45,6 +45,7 @@ export default {
     },
     beforeCreate() {
         this.$store.dispatch('getUsers');
+        this.$store.dispatch('getPermissions');
     },
     computed: {
         titleSize: function () {
