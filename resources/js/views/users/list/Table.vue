@@ -1,8 +1,8 @@
 <template>
-    <div>
+    <vue-scroll :ops="scrollOptions"> 
         <b-table :data="data" :columns="columns" :selected.sync="selected" focusable>
         </b-table>
-    </div>
+    </vue-scroll>
 </template>
 
 <script>
@@ -11,6 +11,17 @@
         data() {
             return {
                 selected: {},
+                scrollOptions: {
+                    vuescroll: {},
+                    scrollPanel: {
+                        maxHeight: 400
+                    },
+                    rail: {},
+                    bar: {
+                        background: '#8c67ef',
+                        size: '3px'
+                    }  
+                }
             }
         },
         computed: {

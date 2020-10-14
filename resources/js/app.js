@@ -18,7 +18,7 @@ import { vuex } from './store/store';
 
 import VueCookies from 'vue-cookies';
 
-import vuescroll from 'vuescroll';
+import VueScroll from 'vuescroll';
 
 import route from 'ziggy';
 import { Ziggy } from './ziggy';
@@ -31,7 +31,13 @@ window.Vue.use(Buefy, {
 window.Vue.use(VueRouter);
 window.Vue.use(Vuex);
 window.Vue.use(VueCookies);
-window.Vue.use(vuescroll);
+
+window.Vue.use(VueScroll, {
+    ops: {
+        // The global config
+    },
+    name: 'vue-scroll' // customize component name, default -> vueScroll
+});
 
 Vue.mixin({
     methods: {
