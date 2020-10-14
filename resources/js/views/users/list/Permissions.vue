@@ -39,6 +39,9 @@ export default {
     computed: {
         permissions: function () {
             return this.$store.getters.permissions;
+        },
+        userPermissions: function () {
+            return this.user.permissions;
         }
     }
 }

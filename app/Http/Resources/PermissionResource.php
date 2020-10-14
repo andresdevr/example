@@ -16,7 +16,6 @@ class PermissionResource extends JsonResource
     {
         return [
             'id' => $this->id,
-            'users' => UserResource::collection($this->users),
             'name' => $this->name,
             'display' => $this->display,
         ];
