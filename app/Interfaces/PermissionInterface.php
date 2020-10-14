@@ -5,7 +5,7 @@ namespace App\Interfaces;
 
 use Illuminate\Http\Request;
 
-interface PermissionInterface
+interface PermissionInterface extends ModelInterface
 {
     public function index();
 

@@ -3,7 +3,7 @@
 
 namespace App\Interfaces;
 
-interface ProductsInterface
+interface ProductsInterface extends ModelInterface
 {
    
 }
