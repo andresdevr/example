@@ -63,7 +63,7 @@ export default {
     },
     methods: {
         togglePermission: function (id) {
-            this.$store.dispatch('toglePermission', id);
+            this.$store.dispatch('togglePermission', { userId: this.user.id, permissionId: id });
         }
     }
 }

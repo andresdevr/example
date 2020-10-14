@@ -9,7 +9,7 @@ class UserPermissionsRepository implements UserPermissionInterface
 {
     public function toggle(User $user, $permission)
     {
-        $user->permissions()->sync($permission);
+        $user->permissions()->toggle($permission);
         return $user->fresh();
     }
 }

@@ -69,6 +69,22 @@ export const users = {
                     errors: error.response.data.errors
                 };
             }
+        },
+        async togglePermission({ commit }, data) {
+            try {
+                var promise = await axios.post(route('users.permission', { id: data.userId }), { permission: data.permissionId });
+                commit('updateUser', promise.data.data);
+                return {
+                    status: promise.status
+                }
+            } catch (error) {
+                commit('setUsersError', promise.data.data);
+                return {
+                    status: error.response.status,
+                    error: error.response.data.message,
+                    errors: error.response.data.errors
+                };
+            }
         }
     },
     getters: {

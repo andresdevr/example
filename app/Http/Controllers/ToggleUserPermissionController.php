@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Resources\UserResource;
 use App\Interfaces\UserPermissionInterface;
 use App\Models\User;
 use Illuminate\Http\Request;
@@ -17,5 +18,6 @@ class ToggleUserPermissionController extends Controller
     public function __invoke(UserPermissionInterface $userPermission, User $user, Request $request)
     {
         $user = $userPermission->toggle($user, $request->permission);
+        return UserResource::make($user);
     }
 }

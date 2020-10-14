@@ -14,7 +14,8 @@ Route::prefix('ajax')->middleware('ajax')->group(function () {
     Route::apiResource('products', ProductController::class);
 
     Route::apiResource('users', UserController::class);
-   Route::get('permissions', PermissionController::class)->name('permissions.index');
+    Route::get('permissions', PermissionController::class)->name('permissions.index');
+    Route::post('users/{user}/permission', ToggleUserPermissionController::class)->name('users.permission');
 
 });
 
