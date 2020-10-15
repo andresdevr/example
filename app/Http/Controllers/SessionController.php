@@ -16,6 +16,7 @@ class SessionController extends Controller
      */
     public function __invoke(Request $request)
     {
-        return UserResource::make(Auth::user());
+        $user = Auth::user()->load('permissions', 'sessions');
+        return UserResource::make($user);
     }
 }
