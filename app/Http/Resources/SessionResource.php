@@ -4,6 +4,7 @@ namespace App\Http\Resources;
 
 use Carbon\Carbon;
 use Illuminate\Http\Resources\Json\JsonResource;
+use Illuminate\Support\Facades\Log;
 
 class SessionResource extends JsonResource
 {
@@ -18,7 +19,7 @@ class SessionResource extends JsonResource
         return [
             'ip' => $this->ip_address,
             'last_activity' => Carbon::createFromTimestamp($this->last_activity)->toDateTimeString(),
-            'user' => $this->user_id ? UserResource::make($this->user) : 'unknown',
+            'user' => UserResource::make($this->whenLoaded('user')),
             'user_agent' => $this->user_agent
         ];
     }

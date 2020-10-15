@@ -16,4 +16,9 @@ class Session extends Model implements PresenterInterface
     {
         return new SessionPresenter($this);
     }
+
+    public function user() 
+    {
+        return $this->belongsTo(User::class);
+    }
 }

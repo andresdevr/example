@@ -45,7 +45,6 @@ class User extends Authenticatable implements PresenterInterface, MustVerifyEmai
      * @var array
      */
     protected $with = [
-        'permissions', 'sessions'
     ];
 
     public function present()
