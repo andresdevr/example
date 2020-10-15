@@ -17,8 +17,9 @@ class SessionResource extends JsonResource
     {
         return [
             'ip' => $this->ip_address,
-            'last_activity' => Carbon::createFromTimestamp($this->last_activity)->toDateTimeString()
-
+            'last_activity' => Carbon::createFromTimestamp($this->last_activity)->toDateTimeString(),
+            'user' => $this->user_id ? UserResource::make($this->user) : 'unknown',
+            'user_agent' => $this->user_agent
         ];
     }
 }
