@@ -17,7 +17,6 @@
         "php": "^7.2.5",
         "askedio/laravel-soft-cascade": "^8.0",
         "barryvdh/laravel-dompdf": "^0.8.7",
-        "cjp/syscom-service": "^1.0",
         "doctrine/dbal": "^2.11",
         "fideloper/proxy": "^4.2",
         "fruitcake/laravel-cors": "^2.0",
